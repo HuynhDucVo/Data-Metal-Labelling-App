@@ -1,6 +1,10 @@
 # Labelling Metal App
 
-Lightweight web app for capturing, processing and managing images of metal samples. The project provides a React + Vite frontend and an Express/MongoDB backend that can blur image backgrounds, store labeled images, and let users manage uploaded assets.
+Labelling Metal App is a lightweight full-stack web application designed to capture, process, and manage images of metal samples for labeling and analysis. It provides a mobile-friendly camera interface, server-side computer vision processing for background blurring, and a structured data management workflow for storing and organizing labeled images.
+
+The application features a React + Vite frontend for fast, responsive user interaction and an Express + MongoDB backend that handles image uploads, background processing, metadata storage, and file management. Uploaded images can be tagged, previewed, zoomed, and deleted through an intuitive data management UI, making the app suitable for dataset creation, inspection workflows, or research-oriented labeling tasks.
+
+Background processing is performed on the server using Sharp and @imgly/background-removal-node, allowing images to be normalized and visually cleaned before storage. The system ensures safe and unique filenames, supports optional user-defined labels, and exposes a simple REST API for integration or future extension.
 
 ---
 
@@ -198,7 +202,6 @@ Below are the main libraries and tools used throughout the project and their pur
   - `mongoose` — MongoDB object modeling and schema definitions.
   - `cors` — Cross-Origin Resource Sharing middleware.
   - `dotenv` — load environment variables from `.env`.
-  - `jsonwebtoken`, `bcrypt` — included for authentication/secure storage hooks (present in `server/package.json`).
 
 - Image processing / Computer Vision
   - `sharp` — fast, native image processing used for compositing and blurring.
